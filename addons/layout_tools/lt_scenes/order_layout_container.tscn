@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4gnr8rdsf50d"]
+
+[ext_resource type="Script" uid="uid://cograxdhi0deq" path="res://addons/layout_tools/lt_scripts/lt_dock/lt_layout_container.gd" id="1_0ca4l"]
+[ext_resource type="PackedScene" uid="uid://chagwae15vut7" path="res://addons/layout_tools/lt_scenes/layout_name_container.tscn" id="2_rrl3q"]
+[ext_resource type="Texture2D" uid="uid://btauwar64tp1v" path="res://addons/layout_tools/images/godot_MoveUp.svg" id="2_xnhs6"]
+[ext_resource type="PackedScene" uid="uid://be3mdvn87tmho" path="res://addons/layout_tools/lt_scenes/default_button.tscn" id="3_r5kv4"]
+[ext_resource type="Texture2D" uid="uid://100ht8esrqky" path="res://addons/layout_tools/images/godot_MoveDown.svg" id="3_rrl3q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnhs6"]
+bg_color = Color(0.121569, 0.121569, 0.12549, 1)
+border_width_left = 1
+border_width_top = 20
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xnhs6"]
+
+[node name="PopupPanel" type="PopupPanel"]
+size = Vector2i(276, 252)
+theme_override_styles/panel = SubResource("StyleBoxFlat_xnhs6")
+script = ExtResource("1_0ca4l")
+
+[node name="MContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 20.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="V" type="VBoxContainer" parent="MContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MContainer/V"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xnhs6")
+bbcode_enabled = true
+text = "Choose Select"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MContainer/V"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="MContainer/V/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LayoutNameContainer" parent="MContainer/V/ScrollContainer/VBox" instance=ExtResource("2_rrl3q")]
+layout_mode = 2
+
+[node name="LayoutNameContainer2" parent="MContainer/V/ScrollContainer/VBox" instance=ExtResource("2_rrl3q")]
+layout_mode = 2
+
+[node name="LayoutNameContainer3" parent="MContainer/V/ScrollContainer/VBox" instance=ExtResource("2_rrl3q")]
+layout_mode = 2
+
+[node name="LayoutNameContainer4" parent="MContainer/V/ScrollContainer/VBox" instance=ExtResource("2_rrl3q")]
+layout_mode = 2
+
+[node name="LayoutNameContainer5" parent="MContainer/V/ScrollContainer/VBox" instance=ExtResource("2_rrl3q")]
+layout_mode = 2
+
+[node name="LayoutNameContainer6" parent="MContainer/V/ScrollContainer/VBox" instance=ExtResource("2_rrl3q")]
+layout_mode = 2
+
+[node name="LayoutNameContainer7" parent="MContainer/V/ScrollContainer/VBox" instance=ExtResource("2_rrl3q")]
+layout_mode = 2
+
+[node name="LayoutNameContainer8" parent="MContainer/V/ScrollContainer/VBox" instance=ExtResource("2_rrl3q")]
+layout_mode = 2
+
+[node name="LayoutNameContainer9" parent="MContainer/V/ScrollContainer/VBox" instance=ExtResource("2_rrl3q")]
+layout_mode = 2
+
+[node name="LayoutNameContainer10" parent="MContainer/V/ScrollContainer/VBox" instance=ExtResource("2_rrl3q")]
+layout_mode = 2
+
+[node name="LayoutNameContainer11" parent="MContainer/V/ScrollContainer/VBox" instance=ExtResource("2_rrl3q")]
+layout_mode = 2
+
+[node name="LayoutNameContainer12" parent="MContainer/V/ScrollContainer/VBox" instance=ExtResource("2_rrl3q")]
+layout_mode = 2
+
+[node name="LayoutNameContainer13" parent="MContainer/V/ScrollContainer/VBox" instance=ExtResource("2_rrl3q")]
+layout_mode = 2
+
+[node name="s" type="Control" parent="MContainer/V"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="H" type="HBoxContainer" parent="MContainer/V"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_constants/separation = 48
+alignment = 1
+
+[node name="ButtonMoveUP" parent="MContainer/V/H" instance=ExtResource("3_r5kv4")]
+unique_name_in_owner = true
+layout_mode = 2
+icon = ExtResource("2_xnhs6")
+
+[node name="ButtonMoveDOWN" parent="MContainer/V/H" instance=ExtResource("3_r5kv4")]
+unique_name_in_owner = true
+layout_mode = 2
+icon = ExtResource("3_rrl3q")

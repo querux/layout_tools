@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=3 uid="uid://chagwae15vut7"]
+
+[ext_resource type="Script" uid="uid://buatvx1k1skgp" path="res://addons/layout_tools/lt_scripts/lt_popup_panel/lt_layout_name_button.gd" id="1_qr48j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gpkw1"]
+bg_color = Color(0.214, 0.323, 0.432, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0.2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qr48j"]
+bg_color = Color(0.169, 0.255, 0.341, 0.1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0.5)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kytvb"]
+bg_color = Color(0.169, 0.255, 0.341, 0.1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0.5)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_38sei"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0.2)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_klk3m"]
+bg_color = Color(0.214, 0.323, 0.432, 0.4)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0.2)
+
+[node name="LayoutNameContainer" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qr48j")
+
+[node name="H" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="s" type="Control" parent="H"]
+layout_mode = 2
+
+[node name="NameButton" type="Button" parent="H"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_font_sizes/font_size = 12
+theme_override_styles/focus = SubResource("StyleBoxFlat_gpkw1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qr48j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kytvb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_38sei")
+text = "layout_name"
+
+[node name="FocusPanel" type="Panel" parent="H/NameButton"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_klk3m")

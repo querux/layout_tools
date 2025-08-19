@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://be3mdvn87tmho"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rrl3q"]
+bg_color = Color(0.214, 0.323, 0.432, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.216, 0.322, 0.431, 0.9)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[node name="DefaultButton" type="Button"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_styles/focus = SubResource("StyleBoxFlat_rrl3q")
+icon_alignment = 1
